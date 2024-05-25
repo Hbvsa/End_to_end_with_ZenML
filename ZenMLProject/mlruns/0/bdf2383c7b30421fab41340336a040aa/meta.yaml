@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/hbvs9/Desktop/GithubMLOPs/MLOps/ZenMLProject/mlruns/0/bdf2383c7b30421fab41340336a040aa/artifacts
+end_time: 1716133669690
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bdf2383c7b30421fab41340336a040aa
+run_name: languid-moose-57
+run_uuid: bdf2383c7b30421fab41340336a040aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716133668725
+status: 3
+tags: []
+user_id: hbvs9

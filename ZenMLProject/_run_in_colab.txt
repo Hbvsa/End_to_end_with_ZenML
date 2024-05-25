@@ -1,0 +1,22 @@
+#besides requirements
+!git clone https://github.com/Hbvsa/MLOps.git
+!pip install ngrok
+!pip install zenml["server"]
+!zenml integrations sklearn -y
+!zenml integrations mlflow -y
+!zenml integration install mlflow -y
+!zenml experiment-tracker register mlflow_tracker --flavor=mlflow
+!zenml model-deployer register mlflow --flavor=mlflow
+!zenml stack register mlflow_stack -a default -o default -d mlflow -e mlflow_tracker --set
+
+NGROK_TOKEN = '2ghwsX981mRHmDHFDy3GNGAOdSN_3tGPN7gyWBNVxHa2C244Y'
+!ngrok authtoken {NGROK_TOKEN}
+def start_zenml_dashboard(port=8237):
+    if Environment.in_google_colab():
+      from pyngrok import ngrok
+      public_url = ngrok.connect(port)
+      print(f"{public_url}")
+      !zenml up --blocking
+
+!python run_deployment.py --config predict
+start_zenml_dashboard()
