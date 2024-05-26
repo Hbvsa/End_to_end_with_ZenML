@@ -1,0 +1,65 @@
+[2024-05-25 19:40:16,184: INFO: main: Log test
+[2024-05-25 19:40:45,525: INFO: main: Log test 2
+[2024-05-26 00:30:33,022: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 00:30:33,026: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 00:30:33,027: INFO: common: created directory at: artifacts
+[2024-05-26 00:45:59,727: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 00:45:59,728: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 00:45:59,729: INFO: common: created directory at: artifacts
+[2024-05-26 00:47:07,092: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 00:47:07,094: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 00:47:07,095: INFO: common: created directory at: artifacts
+[2024-05-26 00:47:24,175: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 00:47:24,177: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 00:47:24,178: INFO: common: created directory at: artifacts
+[2024-05-26 00:48:32,605: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 00:48:32,606: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 00:48:32,607: INFO: common: created directory at: artifacts
+[2024-05-26 00:50:58,375: INFO: common: created directory at: artifacts/data_ingestions
+[2024-05-26 00:51:10,804: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 00:51:22,603: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 00:52:02,375: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 00:52:02,376: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 00:52:02,377: INFO: common: created directory at: artifacts
+[2024-05-26 00:52:02,378: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 00:52:04,077: INFO: 4015936315: artifacts/data_ingestion/data.zip download with following info 
+ Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6968:3F1A91:9D5624:A6AA48:66527498
+Accept-Ranges: bytes
+Date: Sat, 25 May 2024 23:52:02 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lis1490050-LIS
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1716681122.214579,VS0,VE193
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 29b6642b6f4e1fc5aeed33eb6211c90378eb5626
+Expires: Sat, 25 May 2024 23:57:02 GMT
+Source-Age: 0
+
+
+[2024-05-26 01:41:56,071: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 01:41:56,071: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 01:41:56,073: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 01:41:56,073: INFO: common: created directory at: artifacts
+[2024-05-26 01:41:56,073: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 01:41:56,073: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 01:41:56,253: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 01:44:46,899: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 01:44:46,900: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 01:44:46,900: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 01:44:46,900: INFO: common: created directory at: artifacts
+[2024-05-26 01:44:46,900: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 01:44:46,901: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 01:44:47,085: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
