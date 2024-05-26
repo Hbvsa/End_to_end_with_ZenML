@@ -63,3 +63,19 @@ Source-Age: 0
 [2024-05-26 01:44:46,900: INFO: common: created directory at: artifacts/data_ingestion
 [2024-05-26 01:44:46,901: INFO: data_ingestion: File already exists of size ~ 11345 KB
 [2024-05-26 01:44:47,085: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 18:35:34,817: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 18:35:34,818: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 18:35:34,823: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 18:35:34,823: INFO: common: created directory at: artifacts
+[2024-05-26 18:35:34,823: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 18:35:34,824: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 18:35:35,035: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 18:35:35,035: INFO: main: *******************
+[2024-05-26 18:35:35,035: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 18:35:35,036: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 18:35:35,037: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 18:35:35,037: INFO: common: created directory at: artifacts
+[2024-05-26 18:35:35,038: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 18:35:41,880: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 18:35:41,975: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 18:35:42,028: INFO: main: >>>> stage Prepare base model completed <<<<
