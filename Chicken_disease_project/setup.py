@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Chicken_disease_project"
 AUTHOR_USER_NAME = "Hbvsa"
-SRC_REPO = "cnnClassifier"
+SRC_REPO = "src/cnnClassifier"
 AUTHOR_EMAIL = ""
 
 setuptools.setup(

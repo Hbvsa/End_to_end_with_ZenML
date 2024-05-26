@@ -79,3 +79,897 @@ Source-Age: 0
 [2024-05-26 18:35:41,880: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
 [2024-05-26 18:35:41,975: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
 [2024-05-26 18:35:42,028: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:12:26,496: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:12:26,498: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:12:26,499: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:12:26,499: INFO: common: created directory at: artifacts
+[2024-05-26 19:12:26,499: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:12:26,500: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:12:26,679: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:12:26,679: INFO: main: *******************
+[2024-05-26 19:12:26,679: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:12:26,680: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:12:26,681: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:12:26,681: INFO: common: created directory at: artifacts
+[2024-05-26 19:12:26,681: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:12:26,961: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:12:27,058: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:12:27,120: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:12:27,121: INFO: main: *******************
+[2024-05-26 19:12:27,121: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:12:27,122: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:12:27,123: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:12:27,123: INFO: common: created directory at: artifacts
+[2024-05-26 19:12:27,123: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:12:27,124: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:12:27,124: ERROR: main: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_callbacks.py", line 32, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_callbacks.py", line 24, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2024-05-26 19:13:31,393: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:13:31,395: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:13:31,395: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:13:31,396: INFO: common: created directory at: artifacts
+[2024-05-26 19:13:31,396: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:13:31,396: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:13:31,574: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:13:31,574: INFO: main: *******************
+[2024-05-26 19:13:31,574: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:13:31,575: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:13:31,576: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:13:31,576: INFO: common: created directory at: artifacts
+[2024-05-26 19:13:31,576: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:13:31,861: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:13:31,964: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:13:32,027: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:13:32,027: INFO: main: *******************
+[2024-05-26 19:13:32,027: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:13:32,028: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:13:32,029: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:13:32,029: INFO: common: created directory at: artifacts
+[2024-05-26 19:13:32,029: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:13:32,030: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:13:32,030: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:13:32,176: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:13:32,299: ERROR: main: DLL load failed while importing _ufuncs: The specified module could not be found.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 23, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1150, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 705, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\__init__.py", line 154, in <module>
+    from ._interpolation import *  # noqa: F401 F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\_interpolation.py", line 37, in <module>
+    from scipy import special
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\special\__init__.py", line 772, in <module>
+    from . import _ufuncs
+ImportError: DLL load failed while importing _ufuncs: The specified module could not be found.
+[2024-05-26 19:16:09,647: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:16:09,649: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:16:09,650: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:16:09,650: INFO: common: created directory at: artifacts
+[2024-05-26 19:16:09,650: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:16:09,651: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:16:09,832: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:16:09,833: INFO: main: *******************
+[2024-05-26 19:16:09,833: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:16:09,833: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:16:09,834: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:16:09,834: INFO: common: created directory at: artifacts
+[2024-05-26 19:16:09,834: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:16:10,104: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:16:10,208: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:16:10,276: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:16:10,277: INFO: main: *******************
+[2024-05-26 19:16:10,277: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:16:10,278: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:16:10,279: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:16:10,280: INFO: common: created directory at: artifacts
+[2024-05-26 19:16:10,280: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:16:10,280: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:16:10,280: ERROR: main: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_callbacks.py", line 32, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_callbacks.py", line 24, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 191, in __init__
+    raise ValueError(
+ValueError: The filepath provided must end in `.keras` (Keras model format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2024-05-26 19:17:54,147: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:17:54,149: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:17:54,150: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:17:54,151: INFO: common: created directory at: artifacts
+[2024-05-26 19:17:54,151: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:17:54,151: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:17:54,332: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:17:54,332: INFO: main: *******************
+[2024-05-26 19:17:54,332: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:17:54,333: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:17:54,334: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:17:54,334: INFO: common: created directory at: artifacts
+[2024-05-26 19:17:54,334: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:17:54,602: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:17:54,705: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:17:54,770: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:17:54,771: INFO: main: *******************
+[2024-05-26 19:17:54,771: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:17:54,772: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:17:54,773: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:17:54,773: INFO: common: created directory at: artifacts
+[2024-05-26 19:17:54,773: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:17:54,773: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:17:54,774: ERROR: main: When using `save_weights_only=True` in `ModelCheckpoint`, the filepath provided must end in `.weights.h5` (Keras weights format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 17, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_callbacks.py", line 32, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_callbacks.py", line 24, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(save_weights_only=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\callbacks\model_checkpoint.py", line 183, in __init__
+    raise ValueError(
+ValueError: When using `save_weights_only=True` in `ModelCheckpoint`, the filepath provided must end in `.weights.h5` (Keras weights format). Received: filepath=artifacts\prepare_callbacks\checkpoint_dir\model.h5
+[2024-05-26 19:18:56,063: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:18:56,064: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:18:56,065: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:18:56,065: INFO: common: created directory at: artifacts
+[2024-05-26 19:18:56,066: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:18:56,066: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:18:56,245: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:18:56,246: INFO: main: *******************
+[2024-05-26 19:18:56,246: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:18:56,247: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:18:56,248: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:18:56,248: INFO: common: created directory at: artifacts
+[2024-05-26 19:18:56,248: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:18:56,514: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:18:56,615: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:18:56,680: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:18:56,680: INFO: main: *******************
+[2024-05-26 19:18:56,680: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:18:56,682: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:18:56,683: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:18:56,683: INFO: common: created directory at: artifacts
+[2024-05-26 19:18:56,683: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:18:56,683: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:18:56,683: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:18:56,836: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:18:56,882: ERROR: main: DLL load failed while importing _ufuncs: The specified module could not be found.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 23, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1150, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 705, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\__init__.py", line 154, in <module>
+    from ._interpolation import *  # noqa: F401 F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\_interpolation.py", line 37, in <module>
+    from scipy import special
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\special\__init__.py", line 772, in <module>
+    from . import _ufuncs
+ImportError: DLL load failed while importing _ufuncs: The specified module could not be found.
+[2024-05-26 19:20:45,391: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:20:45,393: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:20:45,394: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:20:45,394: INFO: common: created directory at: artifacts
+[2024-05-26 19:20:45,394: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:20:45,394: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:20:45,587: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:20:45,588: INFO: main: *******************
+[2024-05-26 19:20:45,588: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:20:45,589: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:20:45,590: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:20:45,590: INFO: common: created directory at: artifacts
+[2024-05-26 19:20:45,590: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:20:45,862: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:20:45,964: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:20:46,024: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:20:46,024: INFO: main: *******************
+[2024-05-26 19:20:46,025: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:20:46,026: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:20:46,027: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:20:46,027: INFO: common: created directory at: artifacts
+[2024-05-26 19:20:46,027: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:20:46,027: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:20:46,027: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:20:46,174: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:20:46,220: ERROR: main: DLL load failed while importing _ufuncs: The specified module could not be found.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 23, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1150, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 705, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\__init__.py", line 154, in <module>
+    from ._interpolation import *  # noqa: F401 F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\_interpolation.py", line 37, in <module>
+    from scipy import special
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\special\__init__.py", line 772, in <module>
+    from . import _ufuncs
+ImportError: DLL load failed while importing _ufuncs: The specified module could not be found.
+[2024-05-26 19:21:13,067: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:21:13,068: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:21:13,069: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:21:13,069: INFO: common: created directory at: artifacts
+[2024-05-26 19:21:13,070: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:21:13,070: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:21:13,262: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:21:13,262: INFO: main: *******************
+[2024-05-26 19:21:13,262: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:21:13,264: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:21:13,264: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:21:13,265: INFO: common: created directory at: artifacts
+[2024-05-26 19:21:13,265: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:21:13,530: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:21:13,628: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:21:13,686: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:21:13,686: INFO: main: *******************
+[2024-05-26 19:21:13,686: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:21:13,688: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:21:13,689: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:21:13,689: INFO: common: created directory at: artifacts
+[2024-05-26 19:21:13,689: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:21:13,689: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:21:13,689: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:21:13,823: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:21:13,868: ERROR: main: DLL load failed while importing _ufuncs: The specified module could not be found.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 23, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1150, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 705, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\__init__.py", line 154, in <module>
+    from ._interpolation import *  # noqa: F401 F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\_interpolation.py", line 37, in <module>
+    from scipy import special
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\special\__init__.py", line 772, in <module>
+    from . import _ufuncs
+ImportError: DLL load failed while importing _ufuncs: The specified module could not be found.
+[2024-05-26 19:22:29,859: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:22:29,861: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:22:29,862: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:22:29,862: INFO: common: created directory at: artifacts
+[2024-05-26 19:22:29,862: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:22:29,863: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:22:30,042: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:22:30,042: INFO: main: *******************
+[2024-05-26 19:22:30,042: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:22:30,043: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:22:30,044: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:22:30,044: INFO: common: created directory at: artifacts
+[2024-05-26 19:22:30,044: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:22:30,312: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:22:30,407: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:22:30,465: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:22:30,465: INFO: main: *******************
+[2024-05-26 19:22:30,465: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:22:30,466: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:22:30,467: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:22:30,467: INFO: common: created directory at: artifacts
+[2024-05-26 19:22:30,467: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:22:30,468: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:22:30,468: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:22:30,603: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:22:30,630: INFO: main: >>>> stage Data Ingestion Stage completed <<<<
+[2024-05-26 19:25:09,084: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:25:09,086: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:25:09,087: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:25:09,087: INFO: common: created directory at: artifacts
+[2024-05-26 19:25:09,087: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:25:09,087: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:25:09,277: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:25:09,278: INFO: main: *******************
+[2024-05-26 19:25:09,278: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:25:09,279: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:25:09,280: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:25:09,280: INFO: common: created directory at: artifacts
+[2024-05-26 19:25:09,280: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:25:09,561: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:25:09,671: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:25:09,728: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:25:09,728: INFO: main: *******************
+[2024-05-26 19:25:09,728: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 19:25:09,730: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:25:09,731: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:25:09,731: INFO: common: created directory at: artifacts
+[2024-05-26 19:25:09,731: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:25:09,731: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:25:09,732: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:25:09,882: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:25:09,933: ERROR: main: DLL load failed while importing _ufuncs: The specified module could not be found.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1150, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 705, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\__init__.py", line 154, in <module>
+    from ._interpolation import *  # noqa: F401 F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\_interpolation.py", line 37, in <module>
+    from scipy import special
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\special\__init__.py", line 772, in <module>
+    from . import _ufuncs
+ImportError: DLL load failed while importing _ufuncs: The specified module could not be found.
+[2024-05-26 19:31:31,825: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:31:31,826: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:31:31,827: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:31:31,827: INFO: common: created directory at: artifacts
+[2024-05-26 19:31:31,827: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:31:31,828: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:31:32,015: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:31:32,015: INFO: main: *******************
+[2024-05-26 19:31:32,015: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:31:32,017: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:31:32,018: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:31:32,018: INFO: common: created directory at: artifacts
+[2024-05-26 19:31:32,018: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:31:32,301: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:31:32,411: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:31:32,476: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:31:32,476: INFO: main: *******************
+[2024-05-26 19:31:32,476: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 19:31:32,477: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:31:32,478: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:31:32,478: INFO: common: created directory at: artifacts
+[2024-05-26 19:31:32,479: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:31:32,479: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:31:32,479: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:31:32,634: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:31:32,679: ERROR: main: DLL load failed while importing _ufuncs: The specified module could not be found.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1150, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 705, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\__init__.py", line 154, in <module>
+    from ._interpolation import *  # noqa: F401 F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\ndimage\_interpolation.py", line 37, in <module>
+    from scipy import special
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\__init__.py", line 202, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\scipy\special\__init__.py", line 772, in <module>
+    from . import _ufuncs
+ImportError: DLL load failed while importing _ufuncs: The specified module could not be found.
+[2024-05-26 19:39:12,255: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:39:12,257: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:39:12,258: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:39:12,258: INFO: common: created directory at: artifacts
+[2024-05-26 19:39:12,258: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:39:12,258: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:39:12,452: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:39:12,452: INFO: main: *******************
+[2024-05-26 19:39:12,452: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:39:12,454: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:39:12,454: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:39:12,455: INFO: common: created directory at: artifacts
+[2024-05-26 19:39:12,455: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:39:12,780: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:39:12,886: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:39:12,951: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:39:12,951: INFO: main: *******************
+[2024-05-26 19:39:12,951: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 19:39:12,953: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:39:12,954: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:39:12,954: INFO: common: created directory at: artifacts
+[2024-05-26 19:39:12,954: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:39:12,954: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:39:12,955: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:39:13,110: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:39:14,594: ERROR: main: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 228, in _check_variables_are_known
+    raise ValueError(
+ValueError: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+[2024-05-26 19:44:00,316: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:44:00,318: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:44:00,319: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:44:00,319: INFO: common: created directory at: artifacts
+[2024-05-26 19:44:00,319: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:44:00,319: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:44:00,525: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:44:00,526: INFO: main: *******************
+[2024-05-26 19:44:00,526: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:44:00,527: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:44:00,528: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:44:00,528: INFO: common: created directory at: artifacts
+[2024-05-26 19:44:00,528: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:44:00,814: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:44:00,901: ERROR: main: `keras.optimizers.legacy` is not supported in Keras 3. When using `tf.keras`, to continue using a `tf.keras.optimizers.legacy` optimizer, you can install the `tf_keras` package (Keras 2) and set the environment variable `TF_USE_LEGACY_KERAS=True` to configure TensorFlow to use `tf_keras` when accessing `tf.keras`.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 17, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_02_prepare_base_model.py", line 16, in main
+    prepare_base_model.update_base_model()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_base_model.py", line 52, in update_base_model
+    self.full_model = self._prepare_full_model(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\prepare_base_model.py", line 43, in _prepare_full_model
+    optimizer=tf.keras.optimizers.legacy.SGD(learning_rate=learning_rate),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\__init__.py", line 115, in __init__
+    raise ImportError(
+ImportError: `keras.optimizers.legacy` is not supported in Keras 3. When using `tf.keras`, to continue using a `tf.keras.optimizers.legacy` optimizer, you can install the `tf_keras` package (Keras 2) and set the environment variable `TF_USE_LEGACY_KERAS=True` to configure TensorFlow to use `tf_keras` when accessing `tf.keras`.
+[2024-05-26 19:45:34,637: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:45:34,638: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:45:34,639: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:45:34,639: INFO: common: created directory at: artifacts
+[2024-05-26 19:45:34,639: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:45:34,640: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:45:34,858: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:45:34,858: INFO: main: *******************
+[2024-05-26 19:45:34,858: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:45:34,861: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:45:34,863: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:45:34,864: INFO: common: created directory at: artifacts
+[2024-05-26 19:45:34,864: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:45:35,188: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:45:35,295: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:45:35,358: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:45:35,358: INFO: main: *******************
+[2024-05-26 19:45:35,358: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 19:45:35,360: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:45:35,361: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:45:35,361: INFO: common: created directory at: artifacts
+[2024-05-26 19:45:35,361: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:45:35,361: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:45:35,361: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:45:35,512: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:45:36,914: ERROR: main: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 228, in _check_variables_are_known
+    raise ValueError(
+ValueError: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+[2024-05-26 19:46:24,817: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:46:24,818: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:46:24,819: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:46:24,819: INFO: common: created directory at: artifacts
+[2024-05-26 19:46:24,820: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:46:24,820: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:46:25,011: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:46:25,011: INFO: main: *******************
+[2024-05-26 19:46:25,011: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:46:25,013: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:46:25,014: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:46:25,014: INFO: common: created directory at: artifacts
+[2024-05-26 19:46:25,014: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:46:25,305: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:46:25,403: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:46:25,461: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:46:25,461: INFO: main: *******************
+[2024-05-26 19:46:25,461: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 19:46:25,462: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:46:25,463: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:46:25,463: INFO: common: created directory at: artifacts
+[2024-05-26 19:46:25,464: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:46:25,464: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:46:25,464: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:46:25,616: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:46:26,899: ERROR: main: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 228, in _check_variables_are_known
+    raise ValueError(
+ValueError: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+[2024-05-26 19:56:01,685: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:56:01,686: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:56:01,687: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:56:01,688: INFO: common: created directory at: artifacts
+[2024-05-26 19:56:01,688: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:56:01,688: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:56:01,881: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:56:01,881: INFO: main: *******************
+[2024-05-26 19:56:01,881: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:56:01,883: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:56:01,883: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:56:01,884: INFO: common: created directory at: artifacts
+[2024-05-26 19:56:01,884: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:56:02,151: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:56:02,249: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:56:02,311: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:56:02,311: INFO: main: *******************
+[2024-05-26 19:56:02,311: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 19:56:02,312: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:56:02,313: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:56:02,313: INFO: common: created directory at: artifacts
+[2024-05-26 19:56:02,313: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:56:02,314: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:56:02,314: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:56:02,466: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:56:02,492: ERROR: main: Argument `learning_rate` should be float, or an instance of LearningRateSchedule, or a callable (that takes in the current iteration value and returns the corresponding learning rate value). Received instead: learning_rate=0.01
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 23, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\cnnClassifier\components\training.py", line 67, in train
+    optimizer=tf.keras.optimizers.SGD(learning_rate='0.01'),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\sgd.py", line 60, in __init__
+    super().__init__(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\backend\tensorflow\optimizer.py", line 22, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\base_optimizer.py", line 124, in __init__
+    raise ValueError(
+ValueError: Argument `learning_rate` should be float, or an instance of LearningRateSchedule, or a callable (that takes in the current iteration value and returns the corresponding learning rate value). Received instead: learning_rate=0.01
+[2024-05-26 19:56:21,455: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 19:56:21,457: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:56:21,457: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:56:21,458: INFO: common: created directory at: artifacts
+[2024-05-26 19:56:21,458: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 19:56:21,458: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 19:56:21,646: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 19:56:21,646: INFO: main: *******************
+[2024-05-26 19:56:21,646: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 19:56:21,647: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:56:21,648: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:56:21,648: INFO: common: created directory at: artifacts
+[2024-05-26 19:56:21,648: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 19:56:21,916: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:56:22,015: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 19:56:22,071: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 19:56:22,071: INFO: main: *******************
+[2024-05-26 19:56:22,071: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 19:56:22,073: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 19:56:22,074: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 19:56:22,074: INFO: common: created directory at: artifacts
+[2024-05-26 19:56:22,074: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 19:56:22,074: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 19:56:22,074: INFO: common: created directory at: artifacts\training
+[2024-05-26 19:56:22,222: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 19:56:48,995: INFO: main: >>>> stage Training completed <<<<
+[2024-05-26 20:04:29,667: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 20:04:29,669: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 20:04:29,670: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 20:04:29,670: INFO: common: created directory at: artifacts
+[2024-05-26 20:04:29,670: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 20:04:29,671: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 20:04:29,870: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 20:04:29,870: INFO: main: *******************
+[2024-05-26 20:04:29,870: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 20:04:29,871: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 20:04:29,872: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 20:04:29,873: INFO: common: created directory at: artifacts
+[2024-05-26 20:04:29,873: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 20:04:30,155: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 20:04:30,254: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 20:04:30,319: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 20:04:30,319: INFO: main: *******************
+[2024-05-26 20:04:30,319: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 20:04:30,320: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 20:04:30,321: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 20:04:30,321: INFO: common: created directory at: artifacts
+[2024-05-26 20:04:30,322: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 20:04:30,322: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 20:04:30,322: INFO: common: created directory at: artifacts\training
+[2024-05-26 20:04:30,464: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 20:04:57,558: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 20:04:57,604: INFO: main: >>>> stage Training completed <<<<
+[2024-05-26 21:17:16,386: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 21:17:16,388: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 21:17:16,389: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 21:17:16,390: INFO: common: created directory at: artifacts
+[2024-05-26 21:17:16,390: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 21:17:16,390: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 21:17:16,580: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 21:17:16,580: INFO: main: *******************
+[2024-05-26 21:17:16,580: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 21:17:16,581: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 21:17:16,582: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 21:17:16,582: INFO: common: created directory at: artifacts
+[2024-05-26 21:17:16,583: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 21:17:16,871: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 21:17:16,979: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 21:17:17,046: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 21:17:17,046: INFO: main: *******************
+[2024-05-26 21:17:17,046: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 21:17:17,048: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 21:17:17,049: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 21:17:17,049: INFO: common: created directory at: artifacts
+[2024-05-26 21:17:17,049: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 21:17:17,049: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 21:17:17,049: INFO: common: created directory at: artifacts\training
+[2024-05-26 21:17:17,201: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 21:17:44,210: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 21:17:44,273: INFO: main: >>>> stage Training completed <<<<
+[2024-05-26 21:17:44,273: INFO: main: *******************
+[2024-05-26 21:17:44,273: INFO: main: >>>>>> stage Evaluation stage started <<<<<<
+[2024-05-26 21:17:44,275: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 21:17:44,276: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 21:17:44,276: INFO: common: created directory at: artifacts
+[2024-05-26 21:17:44,413: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 21:17:52,091: INFO: common: json file saved at: scores.json
+[2024-05-26 21:17:52,091: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x
+[2024-05-26 23:44:56,438: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 23:44:56,440: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:44:56,441: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:44:56,441: INFO: common: created directory at: artifacts
+[2024-05-26 23:44:56,441: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 23:44:58,908: INFO: data_ingestion: artifacts/data_ingestion/data.zip download with following info 
+ Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 2F20:70030:11A024F:12B39C7:6653BB65
+Accept-Ranges: bytes
+Date: Sun, 26 May 2024 22:44:56 GMT
+Via: 1.1 varnish
+X-Served-By: cache-lis1490031-LIS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1716763496.963344,VS0,VE602
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 463506bde5d0b8f50a46fcd9d6da299b48ef52aa
+Expires: Sun, 26 May 2024 22:49:56 GMT
+Source-Age: 0
+
+
+[2024-05-26 23:44:59,147: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 23:52:30,706: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 23:52:30,709: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:52:30,709: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:52:30,710: INFO: common: created directory at: artifacts
+[2024-05-26 23:52:30,710: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 23:52:30,710: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 23:52:30,923: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 23:52:30,925: INFO: main: *******************
+[2024-05-26 23:52:30,925: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 23:52:30,927: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:52:30,928: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:52:30,929: INFO: common: created directory at: artifacts
+[2024-05-26 23:52:30,929: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 23:52:31,281: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 23:52:31,410: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 23:52:31,493: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 23:52:31,494: INFO: main: *******************
+[2024-05-26 23:52:31,494: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 23:52:31,495: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:52:31,496: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:52:31,496: INFO: common: created directory at: artifacts
+[2024-05-26 23:52:31,496: ERROR: main: name 'os' is not defined
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\main.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 15, in main
+    prepare_callbacks_config = config.get_prepare_callback_config()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\config\configuration.py", line 49, in get_prepare_callback_config
+    model_ckpt_dir = os.path.dirname(config.checkpoint_model_filepath)
+                     ^^
+NameError: name 'os' is not defined
+[2024-05-26 23:52:58,035: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 23:52:58,037: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:52:58,038: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:52:58,038: INFO: common: created directory at: artifacts
+[2024-05-26 23:52:58,038: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 23:52:58,038: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 23:52:58,217: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 23:52:58,217: INFO: main: *******************
+[2024-05-26 23:52:58,217: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-26 23:52:58,218: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:52:58,219: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:52:58,219: INFO: common: created directory at: artifacts
+[2024-05-26 23:52:58,220: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 23:52:58,480: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 23:52:58,614: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 23:52:58,715: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-26 23:52:58,716: INFO: main: *******************
+[2024-05-26 23:52:58,716: INFO: main: >>>> stage Training started <<<<
+[2024-05-26 23:52:58,717: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:52:58,718: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:52:58,718: INFO: common: created directory at: artifacts
+[2024-05-26 23:52:58,822: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 23:52:58,822: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 23:52:58,822: INFO: common: created directory at: artifacts\training
+[2024-05-26 23:52:58,957: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 23:53:26,488: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 23:53:26,552: INFO: main: >>>> stage Training completed <<<<
+[2024-05-26 23:53:26,552: INFO: main: *******************
+[2024-05-26 23:53:26,552: INFO: main: >>>>>> stage Evaluation stage started <<<<<<
+[2024-05-26 23:53:26,554: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:53:26,555: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:53:26,555: INFO: common: created directory at: artifacts
+[2024-05-26 23:53:26,690: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 23:53:34,044: INFO: common: json file saved at: scores.json
+[2024-05-26 23:53:34,044: INFO: main: >>>>> stage Evaluation stage completed <<<<
+[2024-05-26 23:54:19,160: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 23:54:19,161: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:54:19,162: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:54:19,163: INFO: common: created directory at: artifacts
+[2024-05-26 23:54:19,163: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 23:54:19,163: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 23:54:19,349: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 23:54:29,083: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 23:54:29,085: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:54:29,086: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:54:29,086: INFO: common: created directory at: artifacts
+[2024-05-26 23:54:29,086: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 23:54:29,086: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 23:54:29,271: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage completed<<<<
