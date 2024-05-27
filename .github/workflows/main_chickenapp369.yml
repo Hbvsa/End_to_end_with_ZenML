@@ -14,8 +14,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        repository: Hbvsa/MLOps/Chicken_disease_project
-        path: './Chicken_disease_project'
+        repository: /home/runner/work/MLOps/Chicken_disease_project
+        path: 'Chicken_disease_project'
         
         
 
