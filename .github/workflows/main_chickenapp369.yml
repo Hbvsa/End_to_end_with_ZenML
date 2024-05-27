@@ -11,15 +11,8 @@ jobs:
     runs-on: 'ubuntu-latest'
  
     steps:
-    - name: Checkout only subfolder
-      run: |
-        git init
-        git remote add origin https://github.com/Hbvsa/MLOps.git
-        git config core.sparsecheckout true
-        echo "Chicken_disease_project/" >> .git/info/sparse-checkout
-        git pull origin main
-        cd Chicken_disease_project
-      shell: bash
+    - name: Checkout code
+      uses: actions/checkout@v2
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
