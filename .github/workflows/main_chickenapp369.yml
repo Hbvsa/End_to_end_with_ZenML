@@ -14,11 +14,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        directory: Chicken_disease_project
+        sparse-checkout: |
+          Chicked_disease_project
+        
 
-    - name: Go to Chicken_disease_project directory
-      run: cd Chicken_disease_project
-      
     - name: Print out files
       run: ls -al
 
