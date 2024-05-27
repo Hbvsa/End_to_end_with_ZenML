@@ -1,0 +1,22 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Log in to Azure Container Registry
+        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login chickenapp369.azurecr.io -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
+      - name: Build the Docker image
+        run: docker build -t chickenapp369.azurecr.io/chicken:latest .
+
+      - name: Push the Docker image
+        run: docker push chickenapp369.azurecr.io/chicken:latest
