@@ -13,6 +13,10 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
+
+    - name: Change directory
+      run: cd Chicken_disease_project
+      
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -41,6 +45,10 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
+    
+    - name: Change directory
+      run: cd Chicken_disease_project
+      
     - name: Checkout code
       uses: actions/checkout@v2
     
