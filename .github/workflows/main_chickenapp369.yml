@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Change directory
-      run: cd Chicken_disease_project
+      run: cd ./Chicken_disease_project
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -33,7 +33,7 @@ jobs:
       with:
         push: true
         tags: chickenapp369.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_00dbd09d8c7649f0806afd2c73cd9c4a }}/chicken:${{ github.sha }}
-        file: Dockerfile
+        file: Chicken_disease_project/Dockerfile
        
   deploy:
     runs-on: ubuntu-latest
