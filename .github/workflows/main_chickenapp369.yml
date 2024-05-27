@@ -23,7 +23,10 @@ jobs:
         registry: https://chickenapp369.azurecr.io/
         username: ${{ secrets.AzureAppService_ContainerUsername_00dbd09d8c7649f0806afd2c73cd9c4a }}
         password: ${{ secrets.AzureAppService_ContainerPassword_41c1c22448bd4107ae10379abae88ece }}
-       
+        
+    - name: Print out files
+      run: ls -al
+      
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
