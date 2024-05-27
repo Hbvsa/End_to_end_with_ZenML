@@ -12,9 +12,9 @@ jobs:
  
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
-        path: Chicken_disease_project
+        directory: Chicken_disease_project
 
     - name: Go to Chicken_disease_project directory
       run: cd Chicken_disease_project
