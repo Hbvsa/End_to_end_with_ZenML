@@ -1,7 +1,5 @@
 name: Build and deploy container app to Azure Web App - chickenapp369
-defaults:
-  run:
-    working-directory: Chicken_disease_project
+
 on:
   push:
     branches:
