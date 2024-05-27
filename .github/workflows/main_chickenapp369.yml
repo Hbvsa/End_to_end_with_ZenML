@@ -12,10 +12,7 @@ jobs:
  
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        repository: ./Chicken_disease_project
-        path: Chicken_disease_project
+      uses: actions/checkout@v2
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -32,6 +29,7 @@ jobs:
       with:
         push: true
         tags: chickenapp369.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_00dbd09d8c7649f0806afd2c73cd9c4a }}/chicken:${{ github.sha }}
+        path: ./Chicken_disease_project
         file: ./Dockerfile
        
   deploy:
@@ -43,10 +41,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        repository: ./Chicken_disease_project
-        path: Chicken_disease_project
+      uses: actions/checkout@v2
 
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
