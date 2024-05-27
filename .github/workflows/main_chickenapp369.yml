@@ -14,7 +14,7 @@ jobs:
     - name: Checkout only subfolder
       run: |
         git init
-        git remote add origin ${{ github.repository_url }}
+        git remote add origin https://github.com/Hbvsa/MLOps.git
         git config core.sparsecheckout true
         echo "Chicken_disease_project/" >> .git/info/sparse-checkout
         git pull origin main
