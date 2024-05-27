@@ -14,11 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        path: ./Chicken_disease_project
-
-    - name: Go to Chicken_disease_project directory
-      run: cd Chicken_disease_project
-
+        path: Chicken_disease_project
     - name: Print out files
       run: ls -al
 
