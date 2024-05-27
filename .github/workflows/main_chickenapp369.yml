@@ -30,7 +30,7 @@ jobs:
         push: true
         tags: chickenapp369.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_00dbd09d8c7649f0806afd2c73cd9c4a }}/chicken:${{ github.sha }}
         path: Chicken_disease_project
-        file: ./Dockerfile
+        file: Dockerfile
        
   deploy:
     runs-on: ubuntu-latest
