@@ -14,8 +14,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        repository: ./Chicken_disease_project
-        path: ./Chicken_disease_project
+        repository: MLOps/Chicken_disease_project
+        path: Chicken_disease_project
         
         
 
