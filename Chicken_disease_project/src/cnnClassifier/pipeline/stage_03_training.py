@@ -2,6 +2,8 @@ from src.cnnClassifier.config.configuration import ConfigurationManager
 from src.cnnClassifier.components.prepare_callbacks import PrepareCallback
 from src.cnnClassifier.components.training import Training
 from src.cnnClassifier import logger
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 
 STAGE_NAME = "Training"
 

@@ -1,0 +1,63 @@
+[2024-05-26 23:59:48,529: INFO: stage_03_training: *******************
+[2024-05-26 23:59:48,529: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-26 23:59:48,529: ERROR: stage_03_training: [Errno 2] No such file or directory: 'config\\config.yaml'
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 34, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 14, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\config\configuration.py", line 14, in __init__
+    self.config = read_yaml(config_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    raise e
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\utils\common.py", line 28, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+[2024-05-27 00:00:18,396: INFO: stage_03_training: *******************
+[2024-05-27 00:00:18,396: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-27 00:00:18,396: ERROR: stage_03_training: [Errno 2] No such file or directory: 'config\\config.yaml'
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 34, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 14, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\config\configuration.py", line 14, in __init__
+    self.config = read_yaml(config_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    raise e
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\utils\common.py", line 28, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
+[2024-05-27 00:02:59,272: INFO: stage_03_training: *******************
+[2024-05-27 00:02:59,272: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-27 00:02:59,272: ERROR: stage_03_training: [Errno 2] No such file or directory: 'config\\config.yaml'
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 34, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 14, in main
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\config\configuration.py", line 14, in __init__
+    self.config = read_yaml(config_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    raise e
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\utils\common.py", line 28, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'

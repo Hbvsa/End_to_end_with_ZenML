@@ -973,3 +973,289 @@ NameError: name 'os' is not defined
 [2024-05-26 23:54:29,086: INFO: common: created directory at: artifacts/data_ingestion
 [2024-05-26 23:54:29,086: INFO: data_ingestion: File already exists of size ~ 11345 KB
 [2024-05-26 23:54:29,271: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 23:56:01,232: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-26 23:56:01,233: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:56:01,234: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:56:01,234: INFO: common: created directory at: artifacts
+[2024-05-26 23:56:01,234: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-26 23:56:01,235: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-26 23:56:01,444: INFO: stage_01_data_ingestion: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-26 23:57:08,125: INFO: stage_02_prepare_base_model: *******************
+[2024-05-26 23:57:08,125: INFO: stage_02_prepare_base_model: >>>> stage Prepare base model started <<<<
+[2024-05-26 23:57:08,127: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:57:08,128: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:57:08,128: INFO: common: created directory at: artifacts
+[2024-05-26 23:57:08,129: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-26 23:57:08,389: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 23:57:08,476: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-26 23:57:08,529: INFO: stage_02_prepare_base_model: >>>> stage Prepare base model completed <<<<
+[2024-05-26 23:57:12,863: INFO: stage_03_training: *******************
+[2024-05-26 23:57:12,864: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-26 23:57:12,865: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:57:12,866: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:57:12,866: INFO: common: created directory at: artifacts
+[2024-05-26 23:57:12,866: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 23:57:12,866: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 23:57:12,867: INFO: common: created directory at: artifacts\training
+[2024-05-26 23:57:13,062: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 23:57:17,129: ERROR: stage_03_training: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 34, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\components\training.py", line 74, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+[2024-05-26 23:58:30,130: INFO: stage_03_training: *******************
+[2024-05-26 23:58:30,130: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-26 23:58:30,132: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-26 23:58:30,134: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-26 23:58:30,134: INFO: common: created directory at: artifacts
+[2024-05-26 23:58:30,134: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-26 23:58:30,134: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-26 23:58:30,135: INFO: common: created directory at: artifacts\training
+[2024-05-26 23:58:30,340: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-26 23:58:34,151: ERROR: stage_03_training: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 34, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\components\training.py", line 74, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+[2024-05-27 00:02:01,235: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-27 00:02:01,237: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:02:01,238: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:02:01,239: INFO: common: created directory at: artifacts
+[2024-05-27 00:02:01,239: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-27 00:02:01,239: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-27 00:02:01,431: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-27 00:02:01,431: INFO: main: *******************
+[2024-05-27 00:02:01,431: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-27 00:02:01,432: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:02:01,433: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:02:01,433: INFO: common: created directory at: artifacts
+[2024-05-27 00:02:01,433: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-27 00:02:01,698: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:02:01,800: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:02:01,860: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-27 00:02:01,860: INFO: main: *******************
+[2024-05-27 00:02:01,860: INFO: main: >>>> stage Training started <<<<
+[2024-05-27 00:02:01,861: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:02:01,863: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:02:01,863: INFO: common: created directory at: artifacts
+[2024-05-27 00:02:01,863: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:02:01,863: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:02:01,863: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:02:02,013: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:02:26,690: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:02:26,771: INFO: main: >>>> stage Training completed <<<<
+[2024-05-27 00:02:26,771: INFO: main: *******************
+[2024-05-27 00:02:26,771: INFO: main: >>>>>> stage Evaluation stage started <<<<<<
+[2024-05-27 00:02:26,773: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:02:26,774: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:02:26,774: INFO: common: created directory at: artifacts
+[2024-05-27 00:02:26,909: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:02:33,924: INFO: common: json file saved at: scores.json
+[2024-05-27 00:02:33,924: INFO: main: >>>>> stage Evaluation stage completed <<<<
+[2024-05-27 00:03:20,886: INFO: <ipython-input-4-c981614df70a>: *******************
+[2024-05-27 00:03:20,887: INFO: <ipython-input-4-c981614df70a>: >>>> stage Training started <<<<
+[2024-05-27 00:03:20,888: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:03:20,890: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:03:20,890: INFO: common: created directory at: artifacts
+[2024-05-27 00:03:20,890: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:03:20,890: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:03:20,891: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:03:21,093: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:03:45,098: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:03:45,154: INFO: <ipython-input-4-c981614df70a>: >>>> stage Training completed <<<<
+[2024-05-27 00:03:54,127: INFO: <ipython-input-5-28c0f1d85696>: *******************
+[2024-05-27 00:03:54,127: INFO: <ipython-input-5-28c0f1d85696>: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-27 00:03:54,129: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:03:54,130: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:03:54,130: INFO: common: created directory at: artifacts
+[2024-05-27 00:03:54,130: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:03:54,131: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:03:54,131: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:03:54,259: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:06:25,313: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-27 00:06:25,315: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:06:25,316: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:06:25,316: INFO: common: created directory at: artifacts
+[2024-05-27 00:06:25,316: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-27 00:06:25,317: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-27 00:06:25,499: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-27 00:06:25,499: INFO: main: *******************
+[2024-05-27 00:06:25,499: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-27 00:06:25,501: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:06:25,501: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:06:25,501: INFO: common: created directory at: artifacts
+[2024-05-27 00:06:25,502: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-27 00:06:25,771: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:06:25,885: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:06:25,946: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-27 00:06:25,947: INFO: main: *******************
+[2024-05-27 00:06:25,947: INFO: main: >>>> stage Training started <<<<
+[2024-05-27 00:06:25,948: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:06:25,949: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:06:25,949: INFO: common: created directory at: artifacts
+[2024-05-27 00:06:25,949: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:06:25,949: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:06:25,950: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:06:26,093: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:06:50,861: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:06:50,924: INFO: main: >>>> stage Training completed <<<<
+[2024-05-27 00:06:50,924: INFO: main: *******************
+[2024-05-27 00:06:50,924: INFO: main: >>>>>> stage Evaluation stage started <<<<<<
+[2024-05-27 00:06:50,925: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:06:50,926: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:06:50,926: INFO: common: created directory at: artifacts
+[2024-05-27 00:06:51,051: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:06:58,263: INFO: common: json file saved at: scores.json
+[2024-05-27 00:06:58,263: INFO: main: >>>>> stage Evaluation stage completed <<<<
+[2024-05-27 00:13:53,419: INFO: stage_03_training: *******************
+[2024-05-27 00:13:53,419: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-27 00:13:53,422: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:13:53,423: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:13:53,423: INFO: common: created directory at: artifacts
+[2024-05-27 00:13:53,423: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:13:53,423: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:13:53,424: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:13:53,618: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:13:56,969: ERROR: stage_03_training: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 34, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\components\training.py", line 74, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+[2024-05-27 00:18:46,436: INFO: stage_03_training: *******************
+[2024-05-27 00:18:46,436: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-27 00:18:46,437: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:18:46,438: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:18:46,438: INFO: common: created directory at: artifacts
+[2024-05-27 00:18:46,439: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:18:46,439: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:18:46,439: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:18:46,634: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:18:50,195: ERROR: stage_03_training: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 34, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_03_training.py", line 24, in main
+    training.train(
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\components\training.py", line 74, in train
+    self.model.fit(
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2501' in position 21: character maps to <undefined>
+[2024-05-27 00:20:24,528: INFO: main: >>>> stage Data Ingestion Stage started <<<<
+[2024-05-27 00:20:24,531: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:20:24,532: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:20:24,532: INFO: common: created directory at: artifacts
+[2024-05-27 00:20:24,532: INFO: common: created directory at: artifacts/data_ingestion
+[2024-05-27 00:20:24,532: INFO: data_ingestion: File already exists of size ~ 11345 KB
+[2024-05-27 00:20:24,713: INFO: main: >>>> stage Data Ingestion Stage completed<<<<
+[2024-05-27 00:20:24,713: INFO: main: *******************
+[2024-05-27 00:20:24,713: INFO: main: >>>> stage Prepare base model started <<<<
+[2024-05-27 00:20:24,714: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:20:24,715: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:20:24,715: INFO: common: created directory at: artifacts
+[2024-05-27 00:20:24,715: INFO: common: created directory at: artifacts/prepare_base_model
+[2024-05-27 00:20:24,996: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:20:25,117: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:20:25,179: INFO: main: >>>> stage Prepare base model completed <<<<
+[2024-05-27 00:20:25,179: INFO: main: *******************
+[2024-05-27 00:20:25,179: INFO: main: >>>> stage Training started <<<<
+[2024-05-27 00:20:25,180: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:20:25,180: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:20:25,181: INFO: common: created directory at: artifacts
+[2024-05-27 00:20:25,181: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:20:25,181: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:20:25,181: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:20:25,324: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:20:49,821: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:20:49,882: INFO: main: >>>> stage Training completed <<<<
+[2024-05-27 00:20:49,883: INFO: main: *******************
+[2024-05-27 00:20:49,883: INFO: main: >>>>>> stage Evaluation stage started <<<<<<
+[2024-05-27 00:20:49,884: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:20:49,885: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:20:49,886: INFO: common: created directory at: artifacts
+[2024-05-27 00:20:50,010: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:20:56,880: INFO: common: json file saved at: scores.json
+[2024-05-27 00:20:56,880: INFO: main: >>>>> stage Evaluation stage completed <<<<
+[2024-05-27 00:24:28,097: INFO: stage_03_training: *******************
+[2024-05-27 00:24:28,097: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-27 00:24:28,099: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:24:28,100: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:24:28,100: INFO: common: created directory at: artifacts
+[2024-05-27 00:24:28,101: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:24:28,101: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:24:28,101: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:24:28,297: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:24:50,805: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:24:50,878: INFO: stage_03_training: >>>> stage Training completed <<<<
+[2024-05-27 00:28:34,819: INFO: stage_03_training: *******************
+[2024-05-27 00:28:34,819: INFO: stage_03_training: >>>> stage Training started <<<<
+[2024-05-27 00:28:34,822: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:28:34,823: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:28:34,823: INFO: common: created directory at: artifacts
+[2024-05-27 00:28:34,823: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir
+[2024-05-27 00:28:34,824: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir
+[2024-05-27 00:28:34,824: INFO: common: created directory at: artifacts\training
+[2024-05-27 00:28:35,035: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:29:00,119: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+[2024-05-27 00:29:00,186: INFO: stage_03_training: >>>> stage Training completed <<<<
+[2024-05-27 00:29:04,935: INFO: stage_04_evaluation: *******************
+[2024-05-27 00:29:04,936: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<
+[2024-05-27 00:29:04,937: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:29:04,940: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:29:04,940: INFO: common: created directory at: artifacts
+[2024-05-27 00:29:05,158: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:29:06,668: ERROR: stage_04_evaluation: 'charmap' codec can't encode characters in position 19-20: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_04_evaluation.py", line 29, in <module>
+    obj.main()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\stage_04_evaluation.py", line 19, in main
+    evaluation.evaluation()
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\components\evaluation.py", line 41, in evaluation
+    self.score = model.evaluate(self.valid_generator)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 19-20: character maps to <undefined>
+[2024-05-27 00:29:38,568: INFO: stage_04_evaluation: *******************
+[2024-05-27 00:29:38,568: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<
+[2024-05-27 00:29:38,570: INFO: common: yaml file: config\config.yaml loaded successfully
+[2024-05-27 00:29:38,571: INFO: common: yaml file: params.yaml loaded successfully
+[2024-05-27 00:29:38,571: INFO: common: created directory at: artifacts
+[2024-05-27 00:29:38,767: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 00:29:45,641: INFO: common: json file saved at: scores.json
+[2024-05-27 00:29:45,641: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x
