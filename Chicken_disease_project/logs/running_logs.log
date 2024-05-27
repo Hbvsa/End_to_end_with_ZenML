@@ -1259,3 +1259,68 @@ UnicodeEncodeError: 'charmap' codec can't encode characters in position 19-20: c
 [2024-05-27 00:29:45,641: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x
+[2024-05-27 01:32:49,130: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.1.72:80
+[2024-05-27 01:32:49,131: INFO: _internal: [33mPress CTRL+C to quit[0m
+[2024-05-27 01:32:54,980: INFO: _internal: 127.0.0.1 - - [27/May/2024 01:32:54] "GET / HTTP/1.1" 200 -
+[2024-05-27 01:32:55,030: INFO: _internal: 127.0.0.1 - - [27/May/2024 01:32:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-05-27 01:33:02,874: INFO: _internal: 127.0.0.1 - - [27/May/2024 01:33:02] "GET /train HTTP/1.1" 200 -
+[2024-05-27 01:33:45,022: INFO: _internal: 127.0.0.1 - - [27/May/2024 01:33:45] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+[2024-05-27 01:38:34,292: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.72:8080
+[2024-05-27 01:38:34,293: INFO: _internal: [33mPress CTRL+C to quit[0m
+[2024-05-27 01:38:55,125: INFO: _internal: 192.168.1.72 - - [27/May/2024 01:38:55] "GET / HTTP/1.1" 200 -
+[2024-05-27 01:39:27,971: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 01:39:28,380: ERROR: app: Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\app.py", line 38, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\Desktop\GithubMLOPs\MLOps\Chicken_disease_project\src\cnnClassifier\pipeline\predict.py", line 20, in predict
+    result = np.argmax(model.predict(test_image), axis=1)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\hbvs9\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>
+[2024-05-27 01:39:28,393: INFO: _internal: 192.168.1.72 - - [27/May/2024 01:39:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-05-27 01:41:01,096: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.72:8080
+[2024-05-27 01:41:01,097: INFO: _internal: [33mPress CTRL+C to quit[0m
+[2024-05-27 01:41:08,920: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2024-05-27 01:41:09,376: INFO: _internal: 192.168.1.72 - - [27/May/2024 01:41:09] "POST /predict HTTP/1.1" 200 -
+[2024-05-27 01:41:46,458: INFO: _internal: 192.168.1.72 - - [27/May/2024 01:41:46] "GET /train HTTP/1.1" 200 -
+[2024-05-27 01:41:46,502: INFO: _internal: 192.168.1.72 - - [27/May/2024 01:41:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2024-05-27 01:42:29,403: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.72:8080
+[2024-05-27 01:42:29,403: INFO: _internal: [33mPress CTRL+C to quit[0m
+[2024-05-27 01:42:34,091: INFO: _internal: 192.168.1.72 - - [27/May/2024 01:42:34] "GET / HTTP/1.1" 200 -
+[2024-05-27 01:42:48,077: INFO: _internal: 192.168.1.72 - - [27/May/2024 01:42:48] "GET /train HTTP/1.1" 200 -
