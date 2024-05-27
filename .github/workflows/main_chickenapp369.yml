@@ -11,12 +11,12 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-
-    - name: Change directory
-      run: cd Chicken_disease_project
       
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Change directory
+      run: cd Chicken_disease_project
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -44,11 +44,11 @@ jobs:
 
     steps:
     
-    - name: Change directory
-      run: cd Chicken_disease_project
-      
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Change directory
+      run: cd Chicken_disease_project
     
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
