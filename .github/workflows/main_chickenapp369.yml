@@ -11,11 +11,15 @@ jobs:
     runs-on: 'ubuntu-latest'
  
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        repository: /home/runner/work/MLOps/Chicken_disease_project
-        path: 'Chicken_disease_project'
+    - name: Checkout only subfolder
+      run: |
+        git init
+        git remote add origin ${{ github.repository_url }}
+        git config core.sparsecheckout true
+        echo "Chicken_disease_project/" >> .git/info/sparse-checkout
+        git pull origin main
+        cd Chicken_disease_project
+      shell: bash
         
         
 
