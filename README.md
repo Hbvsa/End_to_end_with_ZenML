@@ -4,7 +4,7 @@
 
 "ZenML is a MLOps framework intended for data scientists or ML engineers looking to standardize machine learning practices. Just add `@step` and `@pipeline` to your existing Python functions to get going."
 
-After adding the simple decorators when the code is run ZenML will automatically keep track of your models, pipelines and artifacts. You can also seamlessly integrate other frameworks for model tracking like MLFlow. It provides a UI to visualize all your runs information on a dashboard UI.
+After adding the simple decorators when the code is run ZenML will automatically keep track of your models, pipelines and artifacts. You can also seamlessly integrate other frameworks for model tracking like MLFlow. It provides a UI to visualize all your runs information.
 
 ![](readme_basic_pipeline.gif)
 
