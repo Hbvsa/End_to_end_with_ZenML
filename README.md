@@ -1,7 +1,21 @@
-# End to end project using ZenML. The project uses ZenML to build data ingestion, training, evaluation pipelines with MLFlow integrated to monitor the model performance. The model is also deployed using MLFlow integrated with ZenML.
+# End to end project using ZenML
 
-## Workflows
-1. In src folder code classes which are necessary to execute the steps of a pipeline.
-2. In the steps folder create a function which initiates and runs the classes. Use @step above the function to make it a step of the ZenML.
-3. In the pipeline folder create a pipeline function to execute multiple step functions. Use @pipeline above the function to make it a pipeline of the ZenML.
-4. Execute all pipelines in a python script.
+"**ZenML** is an extensible, open-source MLOps framework for creating portable, production-ready machine learning pipelines."
+
+"ZenML is a MLOps framework intended for data scientists or ML engineers looking to standardize machine learning practices. Just add `@step` and `@pipeline` to your existing Python functions to get going."
+
+After adding the simple decorators when the code is run ZenML will automatically keep track of your models, pipelines and artifacts. You can also seamlessly integrate other frameworks for model tracking like MLFlow. It provides to visualize all your runs information on a dashboard UI.
+
+![[readme_basic_pipeline.gif]]
+
+"ZenML pipelines can be run on AWS, GCP, Azure, Airflow, Kubeflow and even on Kubernetes without having to change any code or know underlying internals."
+
+ZenML also allows you to deploy your models using for example MLFlow, Seldon, BentoML, Hugging Face, etc...
+
+![[Pasted image 20240620131245.png]]
+
+Check https://github.com/zenml-io/zenml and https://docs.zenml.io/ for more information.
+
+This repo is a an example template for future ML projects produced by experimenting with ZenML.
+
+
