@@ -16,6 +16,6 @@ ZenML also allows you to deploy your models using for example MLFlow, Seldon, Be
 
 Check https://github.com/zenml-io/zenml and https://docs.zenml.io/ for more information.
 
-This repo is a an example template for future ML projects produced by experimenting with ZenML.
+This repo is an example template for future ML projects produced by experimenting with ZenML.
 
 
