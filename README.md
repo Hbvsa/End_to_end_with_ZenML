@@ -6,13 +6,13 @@
 
 After adding the simple decorators when the code is run ZenML will automatically keep track of your models, pipelines and artifacts. You can also seamlessly integrate other frameworks for model tracking like MLFlow. It provides to visualize all your runs information on a dashboard UI.
 
-![[readme_basic_pipeline.gif]]
+![](readme_basic_pipeline.gif)
 
 "ZenML pipelines can be run on AWS, GCP, Azure, Airflow, Kubeflow and even on Kubernetes without having to change any code or know underlying internals."
 
 ZenML also allows you to deploy your models using for example MLFlow, Seldon, BentoML, Hugging Face, etc...
 
-![[Pasted image 20240620131245.png]]
+![](integrations.png)
 
 Check https://github.com/zenml-io/zenml and https://docs.zenml.io/ for more information.
 
